@@ -49,7 +49,7 @@ HelpdeskFlow is an enterprise support-ticket workflow automation system featurin
     - Baseline TF-IDF classifier for latency & quality benchmark
     - Unit tests covering edge cases and malformed outputs
 
-- [ ] **Milestone 5 [MVP]: Workflow graph end-to-end (mock + real LLM)**
+- [x] **Milestone 5 [MVP]: Workflow graph end-to-end (mock + real LLM)**
   - Acceptance checks:
     - LangGraph / explicit state machine: intake -> classify -> retrieve -> draft -> policy_check -> approval_gate -> send/escalate
     - State persistence across restarts
