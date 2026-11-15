@@ -6,6 +6,7 @@ from sqlalchemy import text
 from apps.api.app.core.config import settings
 from apps.api.app.core.logging import RequestIDMiddleware, logger
 from apps.api.app.db.session import Base, engine
+from apps.api.app.api.tickets import router as tickets_router
 
 # Create tables
 Base.metadata.create_all(bind=engine)
@@ -24,6 +25,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(tickets_router)
 
 
 @app.get("/health")

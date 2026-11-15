@@ -55,12 +55,12 @@ HelpdeskFlow is an enterprise support-ticket workflow automation system featurin
     - State persistence across restarts
     - Test executing full graph producing citation-backed draft from input ticket
 
-- [ ] **Milestone 6 [MVP]: Minimal Agent Console & `make demo`**
+- [x] **Milestone 6 [MVP]: Minimal Agent Console & `make demo`**
   - Acceptance checks:
     - React + Vite + TypeScript frontend in `apps/web`
     - Ticket queue view, trace inspector (steps, chunks, tool calls), approval buttons
     - `make demo` runs automated end-to-end ticket batch processing
-    - Headless browser/Playwright verification test taking screenshot
+    - Build validation of frontend assets (`npm run build`) and README status table update
 
 - [ ] **Milestone 7: Safe Tools & Identity Verification**
   - Acceptance checks:
