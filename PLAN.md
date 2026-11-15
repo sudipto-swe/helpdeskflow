@@ -33,13 +33,13 @@ HelpdeskFlow is an enterprise support-ticket workflow automation system featurin
     - `synth/generate_tickets.py`: 150+ tickets (English, Bangla, Banglish with typos) + 80+ golden set tickets + 10+ adversarial tickets
     - Script `scripts/seed.py` creates and verifies data integrity
 
-- [ ] **Milestone 3 [MVP]: KB Ingestion, embeddings, retrieval with citations & Recall@5**
+- [x] **Milestone 3 [MVP]: KB Ingestion, embeddings, retrieval with citations & Recall@5**
   - Acceptance checks:
     - Ingestion pipeline with chunking and metadata preservation
     - Embedding provider with local fast sentence embeddings / multilingual embedding support
     - Vector store / hybrid search implementation with pgvector (and SQLite/Numpy fallback for test environments without pgvector daemon)
     - Retrieval checks ensuring top-k chunks with explicit citations
-    - Eval test verifying Recall@5 threshold on synthetic KB queries
+    - Eval test verifying Recall@5 threshold on synthetic KB queries (achieved 95.56%)
 
 - [ ] **Milestone 4 [MVP]: Classifier with schema validation & mock LLM**
   - Acceptance checks:
