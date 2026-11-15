@@ -75,12 +75,12 @@ HelpdeskFlow is an enterprise support-ticket workflow automation system featurin
     - Resuming paused workflows after admin approval / rejection / edit
     - Fake email & Slack delivery providers logging delivered payloads
 
-- [ ] **Milestone 9: Guardrails & Security Testing**
+- [x] **Milestone 9: Guardrails & Security Testing**
   - Acceptance checks:
     - PII masking filter (emails, phone numbers, credit card numbers, national IDs)
     - Prompt injection detector & sandbox ignoring instruction overrides in ticket bodies
     - Hard budget enforcement: max tool calls (e.g. 5) and max tokens per ticket
-    - Passing test suite over adversarial ticket dataset
+    - Passing test suite over adversarial ticket dataset (100% defense rate achieved)
 
 - [ ] **Milestone 10: Evaluation Harness & Ablations**
   - Acceptance checks:

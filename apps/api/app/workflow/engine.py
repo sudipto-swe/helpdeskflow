@@ -64,7 +64,20 @@ class SupportTicketWorkflow:
         state.status = "processing"
         state.log_step("intake", {"ticket_id": state.ticket_id, "text_len": len(state.text)})
 
-        # 1. Step: Classification & Triage
+        # 0. Safety Guardrail: Prompt Injection & Adversarial Check
+        from apps.api.app.safety.guardrails import SafetyGuardrails
+        is_inj, inj_reason = SafetyGuardrails.detect_prompt_injection(state.text)
+        if is_inj:
+            state.category = "security"
+            state.priority = "urgent"
+            state.status = "escalated"
+            state.approval_required = True
+            state.approval_reason = inj_reason
+            state.draft_response = "Request flagged for security audit and escalated to human supervisor."
+            self.tools.escalate_to_human(state.ticket_id, inj_reason, priority="urgent")
+            state.log_step("guardrail_injection_intercept", {"reason": inj_reason})
+            self._persist_ticket(state)
+            return state
         triage = self.classifier.classify(state.text)
         state.category = triage.category
         state.priority = triage.priority
