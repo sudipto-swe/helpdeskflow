@@ -1,0 +1,35 @@
+{
+  "evaluation_timestamp": "2026-11-16T03:51:28Z",
+  "provider": "mock",
+  "golden_samples_count": 90,
+  "adversarial_samples_count": 12,
+  "classification": {
+    "llm_accuracy": 0.7167,
+    "llm_macro_f1": 0.7436,
+    "tfidf_accuracy": 0.5167,
+    "tfidf_macro_f1": 0.3601
+  },
+  "retrieval": {
+    "recall_at_5_no_rag": 0.0,
+    "recall_at_5_rag": 0.9556,
+    "recall_at_5_rag_rerank": 0.9556,
+    "mrr": 0.8411
+  },
+  "citations": {
+    "citation_correctness": 0.8778
+  },
+  "safety_and_policy": {
+    "policy_violation_rate": 0.0,
+    "adversarial_defense_pass_rate": 1.0
+  },
+  "workflow_distribution": {
+    "auto_resolution_rate": 0.5667,
+    "awaiting_approval_rate": 0.3667,
+    "escalation_rate": 0.0667
+  },
+  "performance": {
+    "latency_p50_ms": 29.92,
+    "latency_p95_ms": 36.36,
+    "tokens_per_ticket_estimate": 350
+  }
+}
