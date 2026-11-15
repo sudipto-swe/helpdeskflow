@@ -62,7 +62,7 @@ HelpdeskFlow is an enterprise support-ticket workflow automation system featurin
     - `make demo` runs automated end-to-end ticket batch processing
     - Build validation of frontend assets (`npm run build`) and README status table update
 
-- [ ] **Milestone 7: Safe Tools & Identity Verification**
+- [x] **Milestone 7: Safe Tools & Identity Verification**
   - Acceptance checks:
     - `get_customer`, `get_billing_status`, `get_order_status` requiring customer identity match
     - `check_refund_policy`: 100% deterministic code logic (LLM cannot override)
