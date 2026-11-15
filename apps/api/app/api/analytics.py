@@ -1,5 +1,6 @@
 """Analytics API endpoints for HelpdeskFlow dashboard."""
 from typing import Any
+
 from fastapi import APIRouter, Depends
 from sqlalchemy import func
 from sqlalchemy.orm import Session

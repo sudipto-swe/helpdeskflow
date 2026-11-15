@@ -94,10 +94,11 @@ HelpdeskFlow is an enterprise support-ticket workflow automation system featurin
     - Analytics API & Console tab: auto-resolution rate, escalation rate, avg handling time, tokens/ticket
     - Human feedback recording (rating, corrected draft, audit trail)
 
-- [ ] **Milestone 12: Documentation, Deployment Config & DoD Sign-off**
+- [x] **Milestone 12: Documentation, Deployment Config & DoD Sign-off**
   - Acceptance checks:
     - `docs/INTERVIEW_NOTES.md` (15 in-depth interview questions & answers, architecture, trade-offs)
-    - `docs/CV_BULLETS.md` (3 variants x 3 bullets backed strictly by `results/`)
+    - `docs/CV_BULLETS.md` (3 variants x 3 bullets backed strictly by `results/eval_summary.json`)
     - Free tier deployment manifests (`deploy/` for Vercel, HuggingFace/Render, Neon/Supabase)
     - `HUMAN_TODO.md` with exact click-by-click instructions
     - `scripts/smoke.sh` passes end-to-end
+    - All unit, integration, lint, and type-checks 100% green

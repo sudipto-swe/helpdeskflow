@@ -19,12 +19,32 @@ HelpdeskFlow is an enterprise support-ticket workflow automation system designed
 | Milestone 4: Ticket Classifier with Schema Validation | **Done** | Validated Pydantic v2 schemas + TF-IDF baseline benchmark |
 | Milestone 5: Workflow State Machine & LangGraph Logic | **Done** | Intake -> Classify -> Retrieve -> Draft -> Policy -> Gate |
 | Milestone 6: Agent Console (React/Vite/TS) & Demo | **Done** | Built Vite SPA + `make demo` (32ms avg latency) |
-| Milestone 7: Safe Tools & Identity Verification | **Planned** | Deterministic refund policy function & identity matching |
-| Milestone 8: Approval Gate & Fake Providers | **Planned** | Async paused state persistence & email/slack logging |
-| Milestone 9: Guardrails & Security Testing | **Planned** | PII masking, prompt injection defense, budget enforcement |
-| Milestone 10: Evaluation Harness & Ablations | **Planned** | Comprehensive Golden Set & Adversarial eval suite |
-| Milestone 11: Analytics Dashboard & Feedback Loop | **Planned** | Latency, token budget, auto-resolution metrics |
-| Milestone 12: Docs, Deployment Config & DoD Sign-off | **Planned** | Interview notes, CV bullets, and free tier deploy |
+| Milestone 7: Safe Tools & Identity Verification | **Done** | Deterministic refund policy function & identity matching |
+| Milestone 8: Approval Gate & Fake Providers | **Done** | Async paused state persistence & email/slack logging |
+| Milestone 9: Guardrails & Security Testing | **Done** | PII masking, 100% prompt injection defense, tool budgets |
+| Milestone 10: Evaluation Harness & Ablations | **Done** | Results in `results/eval_summary.json` |
+| Milestone 11: Analytics Dashboard & Feedback Loop | **Done** | `/analytics/summary` endpoint & console tab |
+| Milestone 12: Docs, Deployment Config & DoD Sign-off | **Done** | Interview notes, CV bullets, free tier deploy configs |
+
+---
+
+## Evaluation Results
+
+All metrics below are generated directly by `eval/run_eval.py` on the held-out golden set (90 tickets) and adversarial test suite (12 cases), committed at [`results/eval_summary.json`](results/eval_summary.json):
+
+| Metric | Result | Target / Baseline |
+|---|---|---|
+| **Classification Macro-F1** | **74.36%** | vs TF-IDF Baseline (36.01%) |
+| **Classification Accuracy** | **71.67%** | vs TF-IDF Baseline (51.67%) |
+| **Retrieval Recall@5 (Hybrid RAG)** | **95.56%** | vs No-RAG (0.0%) |
+| **Retrieval MRR** | **0.841** | Reciprocal rank of ground truth |
+| **Citation Correctness** | **87.78%** | Overlap with ground truth KB chunks |
+| **Policy Violation Rate** | **0.00%** | Hard target 0.0% (deterministic code enforcement) |
+| **Adversarial Defense Pass Rate** | **100.00%** | 12/12 attacks intercepted |
+| **Auto-Resolution Rate** | **56.67%** | Fully safe deterministic resolution |
+| **Human Review / Approval Rate** | **36.67%** | Sensitive billing/refund gating |
+| **Escalation Rate** | **6.67%** | Urgent / hostile requests |
+| **Latency p50 / p95** | **29.9ms / 36.4ms** | High-performance local hybrid pipeline |
 
 ---
 
