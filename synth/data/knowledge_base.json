@@ -1,0 +1,501 @@
+[
+  {
+    "id": "KB-POL-001",
+    "title": "Refund Policy for Internet Subscriptions",
+    "category": "policy",
+    "tags": [
+      "refund",
+      "billing",
+      "isp",
+      "policy"
+    ],
+    "content": "Internet subscription fees are strictly non-refundable once the billing cycle begins. However, if service is completely down for more than 72 consecutive hours due to a verified ISP-side fault (such as core fiber outage), customers are eligible for a prorated bill adjustment or credit note on their next month's invoice. No cash or direct wallet refunds are issued for subscription fees."
+  },
+  {
+    "id": "KB-POL-002",
+    "title": "E-Commerce Return and Refund Policy",
+    "category": "policy",
+    "tags": [
+      "refund",
+      "return",
+      "bazar",
+      "order"
+    ],
+    "content": "For items purchased through BengalNet Bazar, return requests must be submitted within 7 calendar days of delivery. Items must be unopened, in original packaging with original invoice and seals intact. Refunds for approved returns are processed back to the original payment method (bKash, Nagad, or Bank Card) within 5 to 7 business days after inspection. Perishable goods and software licenses are strictly non-returnable."
+  },
+  {
+    "id": "KB-POL-003",
+    "title": "Defective Hardware and Router Warranty",
+    "category": "policy",
+    "tags": [
+      "warranty",
+      "hardware",
+      "router",
+      "onu"
+    ],
+    "content": "ONU and Wi-Fi routers supplied by BengalNet come with a 1-year replacement warranty covering manufacturing defects. Physical damage, water ingress, burnt components from lightning strikes or power surges, and broken fiber patch cords are excluded from warranty. Replacement requires an on-site technician inspection."
+  },
+  {
+    "id": "KB-POL-004",
+    "title": "Fair Usage Policy (FUP) & Bandwidth Throttling",
+    "category": "policy",
+    "tags": [
+      "fup",
+      "speed",
+      "policy",
+      "bandwidth"
+    ],
+    "content": "All residential fiber packages offer unlimited data volume without monthly caps. However, commercial hosting, unauthorized ISP reselling, or peer-to-peer distribution exceeding 15TB per month is subject to bandwidth throttling or suspension under BengalNet Terms of Service section 4.2."
+  },
+  {
+    "id": "KB-POL-005",
+    "title": "Account Cancellation and Service Termination",
+    "category": "policy",
+    "tags": [
+      "cancellation",
+      "disconnect",
+      "account"
+    ],
+    "content": "Customers wishing to cancel their internet connection must provide at least 7 days notice prior to the end of their billing cycle. Any rented BengalNet ONU/terminal device must be handed over to the recovery agent. Outstanding invoices must be settled before clearance certificate is issued."
+  },
+  {
+    "id": "KB-BIL-001",
+    "title": "Payment Methods: bKash, Nagad, and Credit Cards",
+    "category": "billing",
+    "tags": [
+      "payment",
+      "bkash",
+      "nagad",
+      "billing"
+    ],
+    "content": "BengalNet accepts bill payments via bKash Merchant App (Payment -> Merchant ID 01700998877), Nagad (Merchant ID 01800998877), and Visa/Mastercard credit and debit cards via our customer portal (portal.bengalnet.bd). Always enter your 8-digit Customer ID (e.g. CUST-1042) as the payment reference."
+  },
+  {
+    "id": "KB-BIL-002",
+    "title": "Payment Confirmation and Auto-Reconnection",
+    "category": "billing",
+    "tags": [
+      "payment",
+      "reconnection",
+      "billing"
+    ],
+    "content": "When paying via bKash or Nagad using your correct Customer ID in the reference field, line reactivation occurs automatically within 5 to 10 minutes. If the line remains disconnected after 15 minutes, please submit your Transaction ID (TrxID) to support for manual reconciliation."
+  },
+  {
+    "id": "KB-BIL-003",
+    "title": "Monthly Billing Cycle and Due Dates",
+    "category": "billing",
+    "tags": [
+      "billing",
+      "invoice",
+      "due_date"
+    ],
+    "content": "Monthly invoices are generated on the 1st of each calendar month. The payment due date is the 7th of the month. A late fee of 100 BDT applies to payments made after the 7th. Unpaid connections are automatically suspended on the 10th."
+  },
+  {
+    "id": "KB-BIL-004",
+    "title": "Billing Dispute Resolution Procedure",
+    "category": "billing",
+    "tags": [
+      "dispute",
+      "billing",
+      "escalation"
+    ],
+    "content": "If an invoice reflects incorrect package charges, duplicate payments, or unexplained fees, submit a ticket with category 'Billing Dispute'. The finance department will audit gateway logs and resolve discrepancies within 48 hours. Disputed accounts are exempted from automatic line disconnection while an active audit ticket is open."
+  },
+  {
+    "id": "KB-BIL-005",
+    "title": "Package Upgrade and Downgrade Rules",
+    "category": "billing",
+    "tags": [
+      "package",
+      "upgrade",
+      "downgrade",
+      "speed"
+    ],
+    "content": "Package upgrades (e.g. 20 Mbps to 50 Mbps) take effect immediately upon paying the prorated price difference. Package downgrades take effect only at the beginning of the subsequent billing cycle (1st of next month)."
+  },
+  {
+    "id": "KB-TEC-001",
+    "title": "Red LOS Light Blinking on ONU/Optical Unit",
+    "category": "technical",
+    "tags": [
+      "los",
+      "red_light",
+      "fiber",
+      "onu"
+    ],
+    "content": "A flashing red LOS (Loss of Signal) light on the ONU indicates physical fiber breakage or loss of optical signal from the distribution box (TJ box). Step 1: Check if the blue/green fiber patch cord is bent or loose. Do NOT pull or clean fiber tip without proper tools. If the red light persists, a field technician visit is required."
+  },
+  {
+    "id": "KB-TEC-002",
+    "title": "PON Light Blinking or Off",
+    "category": "technical",
+    "tags": [
+      "pon",
+      "onu",
+      "authentication"
+    ],
+    "content": "A solid green PON light means normal registration with OLT. If the PON light is flashing green or off, the ONU has lost OLT authorization or is attempting re-registration. Power cycle the ONU by turning off power for 30 seconds. If it does not stabilize within 3 minutes, support must verify OLT MAC registration."
+  },
+  {
+    "id": "KB-TEC-003",
+    "title": "Slow Internet Speed Troubleshooting",
+    "category": "technical",
+    "tags": [
+      "slow",
+      "speed",
+      "wifi",
+      "bandwidth"
+    ],
+    "content": "Before testing speed, connect your PC directly to the router LAN port via Ethernet cable (Cat 6). Disconnect all other devices and stop background downloads/torrents. Test via speedtest.net pointing to 'BengalNet Dhaka Server'. 2.4 GHz Wi-Fi typically maxes out at 30-40 Mbps in crowded apartment buildings; use 5 GHz Wi-Fi for full speeds."
+  },
+  {
+    "id": "KB-TEC-004",
+    "title": "Wi-Fi Router Reset and Default Credentials",
+    "category": "technical",
+    "tags": [
+      "router",
+      "reset",
+      "password",
+      "wifi"
+    ],
+    "content": "Pressing the physical Reset pinhole for 10 seconds restores router factory settings. Default management IP is 192.168.1.1 or 192.168.0.1. Default admin login is printed on the bottom label of your router. Note: resetting the router will wipe PPPoE credentials, requiring re-entry of your BengalNet username and password."
+  },
+  {
+    "id": "KB-TEC-005",
+    "title": "Scheduled Maintenance and Fiber Cut Protocol",
+    "category": "technical",
+    "tags": [
+      "maintenance",
+      "fiber_cut",
+      "outage"
+    ],
+    "content": "Routine backbone maintenance takes place between 2:00 AM and 6:00 AM. In the event of emergency overhead fiber cuts (e.g. utility roadwork or storm damage), restoration teams are deployed with an SLA of 4 hours for metro areas (Dhaka/Chittagong) and 6 hours for regional zones."
+  },
+  {
+    "id": "KB-TEC-006",
+    "title": "DNS Configuration and Recommended Resolvers",
+    "category": "technical",
+    "tags": [
+      "dns",
+      "configuration",
+      "network"
+    ],
+    "content": "BengalNet primary local DNS resolver is 103.145.110.2 and secondary is 103.145.110.3. For fallback, Google Public DNS (8.8.8.8, 8.8.4.4) or Cloudflare DNS (1.1.1.1) may be configured in router DHCP settings."
+  },
+  {
+    "id": "KB-TEC-007",
+    "title": "Public Static IP Address Allocation",
+    "category": "technical",
+    "tags": [
+      "static_ip",
+      "cctv",
+      "port_forward"
+    ],
+    "content": "Residential connections use Carrier Grade NAT (CGNAT) by default. Customers needing port forwarding for CCTV, gaming servers or remote access can subscribe to a dedicated Real Static IP for an additional 250 BDT/month."
+  },
+  {
+    "id": "KB-EC-001",
+    "title": "Bazar Order Tracking and Delivery Timelines",
+    "category": "order",
+    "tags": [
+      "bazar",
+      "delivery",
+      "tracking",
+      "timeline"
+    ],
+    "content": "Orders inside Dhaka City are delivered within 24 to 48 hours via BengalExpress. Deliveries outside Dhaka take 3 to 5 business days via courier partners (Sundarban, Steadfast, RedX). Live order tracking is available on the BengalNet Bazar dashboard using your Order ID (e.g. ORD-9812)."
+  },
+  {
+    "id": "KB-EC-002",
+    "title": "Damaged or Wrong Product Received",
+    "category": "order",
+    "tags": [
+      "damage",
+      "wrong_item",
+      "bazar",
+      "replacement"
+    ],
+    "content": "If you receive a package with damaged seals or missing components, inform the delivery rider immediately or report to support within 24 hours of delivery. Keep the outer shipping flyer and unboxing video as photo/video proof. A free pickup and immediate replacement will be scheduled."
+  },
+  {
+    "id": "KB-EC-003",
+    "title": "Order Cancellation Before Shipment",
+    "category": "order",
+    "tags": [
+      "cancel_order",
+      "order",
+      "bazar"
+    ],
+    "content": "Orders can be cancelled free of charge if their status is 'Pending' or 'Processing'. Once status reaches 'Shipped' or 'Out for Delivery', the package cannot be cancelled in transit; you must refuse delivery or initiate a standard return."
+  },
+  {
+    "id": "KB-EC-004",
+    "title": "Cash on Delivery (COD) Rules and Limits",
+    "category": "order",
+    "tags": [
+      "cod",
+      "payment",
+      "bazar"
+    ],
+    "content": "Cash on Delivery is available for cart totals up to 10,000 BDT. For orders exceeding 10,000 BDT, a minimum 10% advance deposit via bKash or card is required to confirm shipping."
+  },
+  {
+    "id": "KB-EC-005",
+    "title": "Available Networking Hardware on Bazar",
+    "category": "order",
+    "tags": [
+      "hardware",
+      "router",
+      "cat6",
+      "bazar"
+    ],
+    "content": "BengalNet Bazar stocks certified dual-band Wi-Fi 6 routers (TP-Link, D-Link, Netgear), Cat6 patch cables, gigabit switches, and UPS backup batteries for ONUs. Free on-site setup is included with any router purchase for existing ISP subscribers."
+  },
+  {
+    "id": "KB-SEC-001",
+    "title": "Customer Identity Verification Protocol",
+    "category": "security",
+    "tags": [
+      "identity",
+      "verification",
+      "security",
+      "pii"
+    ],
+    "content": "Support agents and automated systems are strictly forbidden from disclosing customer PII, billing history, or order details without verified identity. Verification requires matching the registered Customer ID alongside the registered phone number or national ID (NID) last 4 digits. Cross-customer data requests must be rejected immediately."
+  },
+  {
+    "id": "KB-SEC-002",
+    "title": "Escalation Criteria for Tier-2 Human Support",
+    "category": "escalation",
+    "tags": [
+      "escalation",
+      "human",
+      "supervisor",
+      "policy"
+    ],
+    "content": "Tickets must be immediately escalated to a human supervisor under the following conditions: 1. Threats of legal action or regulatory complaint (BTRC / Consumer Rights Directorate); 2. Billing dispute or refund claims exceeding 1,000 BDT; 3. Suspected security compromise or abusive harassment; 4. Language sentiment marked as high hostility or dissatisfaction."
+  },
+  {
+    "id": "KB-SEC-003",
+    "title": "Account Ownership Transfer Procedure",
+    "category": "security",
+    "tags": [
+      "ownership",
+      "transfer",
+      "nid"
+    ],
+    "content": "Transferring internet connection ownership to another person (e.g. moving apartment) requires NID copies and consent letters from both the current and new owners. There is a nominal transfer fee of 300 BDT."
+  },
+  {
+    "id": "KB-SEC-004",
+    "title": "Phishing and Scam Alert",
+    "category": "security",
+    "tags": [
+      "scam",
+      "phishing",
+      "bkash_pin"
+    ],
+    "content": "BengalNet employees and automated bots will NEVER ask for your bKash/Nagad PIN, OTP, or email password. Always verify payment requests come through official merchant numbers."
+  },
+  {
+    "id": "KB-SEC-005",
+    "title": "Service Level Agreement (SLA) Matrix",
+    "category": "policy",
+    "tags": [
+      "sla",
+      "response_time",
+      "uptime"
+    ],
+    "content": "Network uptime SLA is 99.5% per month. First response time for critical tickets (total outage) is under 15 minutes. Standard tickets (speed issues, order queries) are answered within 1 hour. Physical technician visits are conducted between 9:00 AM and 8:00 PM 7 days a week."
+  },
+  {
+    "id": "KB-LOC-101",
+    "title": "Area Coverage and Field Office: Gulshan",
+    "category": "technical",
+    "tags": [
+      "coverage",
+      "area",
+      "gulshan",
+      "field_office"
+    ],
+    "content": "BengalNet maintains dedicated fiber POPs and local technical teams in Gulshan. Local line maintenance hours are 9:00 AM to 7:00 PM daily. Emergency fiber splicing vans are on standby 24/7. For physical bill payment and hardware returns, visit our local customer care center at Gulshan Sector Hub."
+  },
+  {
+    "id": "KB-LOC-102",
+    "title": "Area Coverage and Field Office: Dhanmondi",
+    "category": "technical",
+    "tags": [
+      "coverage",
+      "area",
+      "dhanmondi",
+      "field_office"
+    ],
+    "content": "BengalNet maintains dedicated fiber POPs and local technical teams in Dhanmondi. Local line maintenance hours are 9:00 AM to 7:00 PM daily. Emergency fiber splicing vans are on standby 24/7. For physical bill payment and hardware returns, visit our local customer care center at Dhanmondi Sector Hub."
+  },
+  {
+    "id": "KB-LOC-103",
+    "title": "Area Coverage and Field Office: Uttara",
+    "category": "technical",
+    "tags": [
+      "coverage",
+      "area",
+      "uttara",
+      "field_office"
+    ],
+    "content": "BengalNet maintains dedicated fiber POPs and local technical teams in Uttara. Local line maintenance hours are 9:00 AM to 7:00 PM daily. Emergency fiber splicing vans are on standby 24/7. For physical bill payment and hardware returns, visit our local customer care center at Uttara Sector Hub."
+  },
+  {
+    "id": "KB-LOC-104",
+    "title": "Area Coverage and Field Office: Mirpur",
+    "category": "technical",
+    "tags": [
+      "coverage",
+      "area",
+      "mirpur",
+      "field_office"
+    ],
+    "content": "BengalNet maintains dedicated fiber POPs and local technical teams in Mirpur. Local line maintenance hours are 9:00 AM to 7:00 PM daily. Emergency fiber splicing vans are on standby 24/7. For physical bill payment and hardware returns, visit our local customer care center at Mirpur Sector Hub."
+  },
+  {
+    "id": "KB-LOC-105",
+    "title": "Area Coverage and Field Office: Banani",
+    "category": "technical",
+    "tags": [
+      "coverage",
+      "area",
+      "banani",
+      "field_office"
+    ],
+    "content": "BengalNet maintains dedicated fiber POPs and local technical teams in Banani. Local line maintenance hours are 9:00 AM to 7:00 PM daily. Emergency fiber splicing vans are on standby 24/7. For physical bill payment and hardware returns, visit our local customer care center at Banani Sector Hub."
+  },
+  {
+    "id": "KB-LOC-106",
+    "title": "Area Coverage and Field Office: Chittagong-Agrabad",
+    "category": "technical",
+    "tags": [
+      "coverage",
+      "area",
+      "chittagong-agrabad",
+      "field_office"
+    ],
+    "content": "BengalNet maintains dedicated fiber POPs and local technical teams in Chittagong-Agrabad. Local line maintenance hours are 9:00 AM to 7:00 PM daily. Emergency fiber splicing vans are on standby 24/7. For physical bill payment and hardware returns, visit our local customer care center at Chittagong-Agrabad Sector Hub."
+  },
+  {
+    "id": "KB-LOC-107",
+    "title": "Area Coverage and Field Office: Sylhet-Zindabazar",
+    "category": "technical",
+    "tags": [
+      "coverage",
+      "area",
+      "sylhet-zindabazar",
+      "field_office"
+    ],
+    "content": "BengalNet maintains dedicated fiber POPs and local technical teams in Sylhet-Zindabazar. Local line maintenance hours are 9:00 AM to 7:00 PM daily. Emergency fiber splicing vans are on standby 24/7. For physical bill payment and hardware returns, visit our local customer care center at Sylhet-Zindabazar Sector Hub."
+  },
+  {
+    "id": "KB-PKG-201",
+    "title": "Internet Package Details: Starter Home",
+    "category": "billing",
+    "tags": [
+      "package",
+      "starter_home",
+      "pricing"
+    ],
+    "content": "The 'Starter Home' package provides 15 Mbps symmetric upload/download bandwidth for 600 BDT/month. Ideal for browsing and basic streaming. Includes free optical fiber installation with a minimum 3-month commitment."
+  },
+  {
+    "id": "KB-PKG-202",
+    "title": "Internet Package Details: Family Stream",
+    "category": "billing",
+    "tags": [
+      "package",
+      "family_stream",
+      "pricing"
+    ],
+    "content": "The 'Family Stream' package provides 30 Mbps symmetric upload/download bandwidth for 1000 BDT/month. Full HD streaming and work-from-home. Includes free optical fiber installation with a minimum 3-month commitment."
+  },
+  {
+    "id": "KB-PKG-203",
+    "title": "Internet Package Details: Pro Gamer",
+    "category": "billing",
+    "tags": [
+      "package",
+      "pro_gamer",
+      "pricing"
+    ],
+    "content": "The 'Pro Gamer' package provides 60 Mbps symmetric upload/download bandwidth for 1800 BDT/month. Low-latency BDIX routing and priority peering. Includes free optical fiber installation with a minimum 3-month commitment."
+  },
+  {
+    "id": "KB-PKG-204",
+    "title": "Internet Package Details: GigaBiz Enterprise",
+    "category": "billing",
+    "tags": [
+      "package",
+      "gigabiz_enterprise",
+      "pricing"
+    ],
+    "content": "The 'GigaBiz Enterprise' package provides 100 Mbps symmetric upload/download bandwidth for 3500 BDT/month. Dedicated bandwidth and static IP included. Includes free optical fiber installation with a minimum 3-month commitment."
+  },
+  {
+    "id": "KB-FAQ-301",
+    "title": "FAQ: How do I change my Wi-Fi password?",
+    "category": "technical",
+    "tags": [
+      "faq",
+      "technical"
+    ],
+    "content": "Question: How do I change my Wi-Fi password?\nAnswer: Log in to router admin portal (192.168.1.1), navigate to Wireless Settings -> Security, change WPA2 Pre-Shared Key and click Save/Reboot."
+  },
+  {
+    "id": "KB-FAQ-302",
+    "title": "FAQ: Can I temporarily freeze my account while traveling?",
+    "category": "policy",
+    "tags": [
+      "faq",
+      "policy"
+    ],
+    "content": "Question: Can I temporarily freeze my account while traveling?\nAnswer: Yes, connections can be frozen for up to 60 days per calendar year for a monthly maintenance charge of 100 BDT. Request at least 3 days in advance."
+  },
+  {
+    "id": "KB-FAQ-303",
+    "title": "FAQ: Do you offer corporate or SME dedicated connections?",
+    "category": "billing",
+    "tags": [
+      "faq",
+      "billing"
+    ],
+    "content": "Question: Do you offer corporate or SME dedicated connections?\nAnswer: Yes, BengalNet Enterprise provides dedicated 1:1 duplex lines with 99.9% uptime SLA, redundant fiber paths, and a dedicated account manager."
+  },
+  {
+    "id": "KB-FAQ-304",
+    "title": "FAQ: Why is YouTube buffering while Facebook works fine?",
+    "category": "technical",
+    "tags": [
+      "faq",
+      "technical"
+    ],
+    "content": "Question: Why is YouTube buffering while Facebook works fine?\nAnswer: This usually indicates peering congestion or DNS caching delay. Power cycle router, flush DNS cache, or switch router DNS to Cloudflare (1.1.1.1)."
+  },
+  {
+    "id": "KB-FAQ-305",
+    "title": "FAQ: How do I order emergency fiber patch cord replacement?",
+    "category": "order",
+    "tags": [
+      "faq",
+      "order"
+    ],
+    "content": "Question: How do I order emergency fiber patch cord replacement?\nAnswer: Order replacement fiber patch cords directly on BengalNet Bazar for 150 BDT with express same-day courier dispatch inside Dhaka."
+  },
+  {
+    "id": "KB-FAQ-306",
+    "title": "FAQ: What is BDIX and why does local content load faster?",
+    "category": "technical",
+    "tags": [
+      "faq",
+      "technical"
+    ],
+    "content": "Question: What is BDIX and why does local content load faster?\nAnswer: BDIX (Bangladesh Internet Exchange) allows local traffic (local news, streaming, mirrors) to route locally without using international gateway bandwidth, ensuring low ping and fast throughput."
+  }
+]

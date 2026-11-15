@@ -25,7 +25,7 @@ HelpdeskFlow is an enterprise support-ticket workflow automation system featurin
     - API `/health` and `/ready` endpoints returning 200 OK with JSON status
     - Unit tests for health endpoints passing under `pytest`
 
-- [ ] **Milestone 2 [MVP]: Synthetic data generators & seed script**
+- [x] **Milestone 2 [MVP]: Synthetic data generators & seed script**
   - Acceptance checks:
     - Fictional company: "BengalNet & Bazar" (ISP + E-commerce support)
     - `synth/generate_kb.py`: 40+ labeled synthetic markdown/json KB docs (refunds, billing, outages, escalation)
