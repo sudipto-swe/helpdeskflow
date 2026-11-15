@@ -3,10 +3,11 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
 
+from apps.api.app.api.analytics import router as analytics_router
+from apps.api.app.api.tickets import router as tickets_router
 from apps.api.app.core.config import settings
 from apps.api.app.core.logging import RequestIDMiddleware, logger
 from apps.api.app.db.session import Base, engine
-from apps.api.app.api.tickets import router as tickets_router
 
 # Create tables
 Base.metadata.create_all(bind=engine)
@@ -27,6 +28,7 @@ app.add_middleware(
 )
 
 app.include_router(tickets_router)
+app.include_router(analytics_router)
 
 
 @app.get("/health")

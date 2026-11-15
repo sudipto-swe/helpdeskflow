@@ -6,9 +6,10 @@
 """
 import time
 from pathlib import Path
-from apps.api.app.db.session import SessionLocal, Base, engine
-from apps.api.app.workflow.engine import SupportTicketWorkflow, TicketWorkflowState
+
+from apps.api.app.db.session import Base, SessionLocal, engine
 from apps.api.app.rag.ingestion import ingest_kb
+from apps.api.app.workflow.engine import SupportTicketWorkflow, TicketWorkflowState
 
 SAMPLE_TICKETS = [
     {
@@ -61,7 +62,7 @@ def run_demo():
     print(f"\nProcessing {len(SAMPLE_TICKETS)} representative sample tickets...\n")
 
     for item in SAMPLE_TICKETS:
-        print(f"------------------------------------------------------------------")
+        print("------------------------------------------------------------------")
         print(f"Ticket ID: {item['id']} | Category Test: {item['name']}")
         print(f"Customer:  {item['customer']}")
         print(f"Inquiry:   \"{item['text']}\"")

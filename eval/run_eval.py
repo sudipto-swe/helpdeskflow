@@ -15,15 +15,16 @@ import argparse
 import json
 import time
 from pathlib import Path
-from typing import Dict, Any, List
+
 import numpy as np
-from sklearn.metrics import classification_report, f1_score, accuracy_score
-from apps.api.app.db.session import SessionLocal, Base, engine
-from apps.api.app.workflow.engine import SupportTicketWorkflow, TicketWorkflowState
+from sklearn.metrics import accuracy_score, f1_score
+
+from apps.api.app.db.session import Base, SessionLocal, engine
+from apps.api.app.llm.classifier import TicketClassifier
 from apps.api.app.llm.client import LLMClient
-from apps.api.app.llm.classifier import TicketClassifier, TFIDFBaselineClassifier
-from apps.api.app.rag.retriever import HybridRetriever
 from apps.api.app.rag.ingestion import ingest_kb
+from apps.api.app.rag.retriever import HybridRetriever
+from apps.api.app.workflow.engine import SupportTicketWorkflow, TicketWorkflowState
 
 RESULTS_DIR = Path("results")
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -33,9 +34,9 @@ KB_FILE = Path("synth/data/knowledge_base.json")
 
 
 def run_evaluation(provider: str = "mock", max_samples: int = 90):
-    print(f"================================================================")
+    print("================================================================")
     print(f"      STARTING EVALUATION HARNESS (Provider: {provider})")
-    print(f"================================================================")
+    print("================================================================")
 
     Base.metadata.create_all(bind=engine)
     db = SessionLocal()
@@ -127,7 +128,7 @@ def run_evaluation(provider: str = "mock", max_samples: int = 90):
     recall_rag_rerank = retrieval_hits_rag_rerank / num_eval
     mrr = mrr_sum / num_eval
 
-    print(f"Retrieval Recall@5 (No RAG):       0.0%")
+    print("Retrieval Recall@5 (No RAG):       0.0%")
     print(f"Retrieval Recall@5 (RAG Dense+Lex): {recall_rag:.2%}")
     print(f"Retrieval Recall@5 (RAG + Rerank):  {recall_rag_rerank:.2%}")
     print(f"Retrieval MRR:                     {mrr:.3f}\n")

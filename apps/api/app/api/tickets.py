@@ -1,10 +1,12 @@
 """FastAPI router for Tickets and Workflow management."""
 from typing import List, Optional
+
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
-from apps.api.app.db.session import get_db
+
 from apps.api.app.db.models import Ticket
+from apps.api.app.db.session import get_db
 from apps.api.app.workflow.engine import SupportTicketWorkflow, TicketWorkflowState
 
 router = APIRouter(prefix="/tickets", tags=["tickets"])

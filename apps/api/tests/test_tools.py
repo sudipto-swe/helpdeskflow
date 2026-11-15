@@ -1,12 +1,9 @@
 """Comprehensive unit and security tests for support tools and deterministic policies."""
 import pytest
-from apps.api.app.db.session import SessionLocal, Base, engine
-from apps.api.app.tools.support_tools import (
-    SupportTools,
-    AuthenticationError,
-    PolicyViolationError
-)
-from apps.api.app.db.models import Customer, Subscription, Order
+
+from apps.api.app.db.models import Customer, Order, Subscription
+from apps.api.app.db.session import Base, SessionLocal, engine
+from apps.api.app.tools.support_tools import AuthenticationError, SupportTools
 
 
 @pytest.fixture(scope="module")

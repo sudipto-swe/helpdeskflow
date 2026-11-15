@@ -89,7 +89,7 @@ HelpdeskFlow is an enterprise support-ticket workflow automation system featurin
     - Ablation comparison: no-RAG vs RAG vs RAG+rerank; single-prompt vs graph workflow
     - Results committed to `results/eval_summary.json`
 
-- [ ] **Milestone 11: Analytics Dashboard & Feedback Loop**
+- [x] **Milestone 11: Analytics Dashboard & Feedback Loop**
   - Acceptance checks:
     - Analytics API & Console tab: auto-resolution rate, escalation rate, avg handling time, tokens/ticket
     - Human feedback recording (rating, corrected draft, audit trail)

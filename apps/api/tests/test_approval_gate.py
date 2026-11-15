@@ -1,9 +1,10 @@
 """Unit tests for Approval Gate, paused workflow persistence, and fake delivery providers."""
 import pytest
-from apps.api.app.db.session import SessionLocal, Base, engine
+
 from apps.api.app.db.models import Ticket
-from apps.api.app.workflow.engine import SupportTicketWorkflow, TicketWorkflowState
+from apps.api.app.db.session import Base, SessionLocal, engine
 from apps.api.app.providers.delivery import fake_email, fake_slack
+from apps.api.app.workflow.engine import SupportTicketWorkflow, TicketWorkflowState
 
 
 @pytest.fixture(scope="module")
