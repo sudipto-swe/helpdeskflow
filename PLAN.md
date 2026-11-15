@@ -41,7 +41,7 @@ HelpdeskFlow is an enterprise support-ticket workflow automation system featurin
     - Retrieval checks ensuring top-k chunks with explicit citations
     - Eval test verifying Recall@5 threshold on synthetic KB queries (achieved 95.56%)
 
-- [ ] **Milestone 4 [MVP]: Classifier with schema validation & mock LLM**
+- [x] **Milestone 4 [MVP]: Classifier with schema validation & mock LLM**
   - Acceptance checks:
     - Pydantic v2 output schema for classification (`category`, `priority`, `language`, `sentiment`, `confidence`)
     - Retry & schema repair on invalid JSON
