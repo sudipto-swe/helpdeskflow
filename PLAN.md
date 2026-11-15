@@ -69,7 +69,7 @@ HelpdeskFlow is an enterprise support-ticket workflow automation system featurin
     - `create_followup_task`, `escalate_to_human`, `schedule_callback`
     - Security tests asserting non-authenticated access and cross-customer queries fail
 
-- [ ] **Milestone 8: Approval Gate, State Persistence & Fake Providers**
+- [x] **Milestone 8: Approval Gate, State Persistence & Fake Providers**
   - Acceptance checks:
     - Gate pauses on: low confidence, billing dispute, refund, account closure, legal threat, policy failure
     - Resuming paused workflows after admin approval / rejection / edit
