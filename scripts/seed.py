@@ -75,21 +75,23 @@ def seed_database():
                 tickets_data = json.load(f)
 
             existing_ticket_count = db.query(Ticket).count()
-            if existing_ticket_count == 0:
+            if existing_ticket_count < 150:
                 for t in tickets_data:
-                    ticket = Ticket(
-                        ticket_id=t["ticket_id"],
-                        customer_id=t.get("customer_id"),
-                        customer_name=t.get("customer_name"),
-                        text=t["text"],
-                        language=t.get("language", "en"),
-                        category=t.get("category"),
-                        priority=t.get("priority"),
-                        status=t.get("status", "new")
-                    )
-                    db.add(ticket)
+                    # Merge or add if not present
+                    if not db.query(Ticket).filter(Ticket.ticket_id == t["ticket_id"]).first():
+                        ticket = Ticket(
+                            ticket_id=t["ticket_id"],
+                            customer_id=t.get("customer_id"),
+                            customer_name=t.get("customer_name"),
+                            text=t["text"],
+                            language=t.get("language", "en"),
+                            category=t.get("category"),
+                            priority=t.get("priority"),
+                            status=t.get("status", "new")
+                        )
+                        db.add(ticket)
                 db.commit()
-                print(f"Seeded {len(tickets_data)} initial tickets.")
+                print(f"Seeded initial tickets (Total: {db.query(Ticket).count()}).")
             else:
                 print(f"Database already contains {existing_ticket_count} tickets. Skipping tickets seed.")
 
