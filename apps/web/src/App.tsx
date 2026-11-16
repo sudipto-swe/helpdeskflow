@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { DEMO_SAMPLE_TICKETS } from './demoData';
 import { 
   CheckCircle2, 
   AlertTriangle, 
@@ -100,15 +101,27 @@ export default function App() {
       const res = await fetch(url);
       if (res.ok) {
         const data = await res.json();
-        setTickets(data);
-        if (data.length > 0 && !selectedTicket) {
-          fetchTicketDetail(data[0].ticket_id);
+        if (data && data.length > 0) {
+          setTickets(data);
+          if (!selectedTicket) {
+            fetchTicketDetail(data[0].ticket_id);
+          }
+          return;
         }
       }
     } catch (e) {
-      console.error('Failed to fetch tickets:', e);
+      console.warn('Backend API offline or unreachable, switching to interactive demo dataset:', e);
     } finally {
       setLoading(false);
+    }
+    // Standalone Static / Demo Fallback for 24/7 GitHub Pages
+    const fallbackList = filter === 'all' 
+      ? DEMO_SAMPLE_TICKETS 
+      : DEMO_SAMPLE_TICKETS.filter(t => t.status === filter);
+    setTickets(fallbackList);
+    if (!selectedTicket && fallbackList.length > 0) {
+      setSelectedTicket(fallbackList[0] as any);
+      setEditedDraft(fallbackList[0].draft_response || '');
     }
   };
 
@@ -118,10 +131,29 @@ export default function App() {
       if (res.ok) {
         const data = await res.json();
         setAnalytics(data);
+        return;
       }
     } catch (e) {
-      console.error('Failed to fetch analytics:', e);
+      // Fallback benchmark analytics for GitHub Pages
     }
+    setAnalytics({
+      total_tickets: 160,
+      resolved: 91,
+      awaiting_approval: 58,
+      escalated: 11,
+      auto_resolution_rate: 0.5687,
+      approval_rate: 0.3625,
+      escalation_rate: 0.0688,
+      policy_violation_rate: 0.0,
+      avg_handling_time_ms: 29.9,
+      category_distribution: {
+        technical: 68,
+        billing: 42,
+        order: 28,
+        policy: 16,
+        escalation: 6
+      }
+    });
   };
 
   const fetchTicketDetail = async (id: string) => {
@@ -132,9 +164,16 @@ export default function App() {
         setSelectedTicket(data);
         setEditedDraft(data.draft_response || '');
         setIsEditing(false);
+        return;
       }
     } catch (e) {
-      console.error('Failed to fetch ticket detail:', e);
+      console.warn('Using local ticket details for id:', id);
+    }
+    const local = DEMO_SAMPLE_TICKETS.find(t => t.ticket_id === id);
+    if (local) {
+      setSelectedTicket(local as any);
+      setEditedDraft(local.draft_response || '');
+      setIsEditing(false);
     }
   };
 
