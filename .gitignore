@@ -14,3 +14,4 @@ results/eval_cache/
 .ruff_cache/
 apps/web/node_modules/
 apps/web/dist/
+.coverage

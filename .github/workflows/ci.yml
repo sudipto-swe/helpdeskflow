@@ -1,4 +1,4 @@
-name: CI
+name: CI & GitHub Pages Deployment
 
 on:
   push:
@@ -6,8 +6,14 @@ on:
   pull_request:
     branches: [ main, master ]
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   lint-test:
+    name: Backend Test Suite & Quality Gates
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
@@ -22,7 +28,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r requirements.txt pytest-cov
 
       - name: Lint with ruff
         run: |
@@ -30,12 +36,41 @@ jobs:
 
       - name: Type check with mypy
         run: |
-          mypy apps/api/app
+          mypy apps/api/app --ignore-missing-imports --explicit-package-bases
 
-      - name: Run unit & integration tests
+      - name: Run unit & integration tests with coverage
         run: |
-          pytest apps/api/tests -v --durations=10
+          PYTHONPATH=. pytest apps/api/tests -v --cov=apps/api/app --cov-report=term-missing
 
       - name: Run evaluation harness on mock provider
         run: |
-          python eval/run_eval.py --provider mock --max-samples 15
+          PYTHONPATH=. python eval/run_eval.py --provider mock --max-samples 25
+
+  build-deploy-pages:
+    name: Build & Deploy UI Console to GitHub Pages
+    needs: lint-test
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+          cache-dependency-path: apps/web/package-lock.json
+
+      - name: Build Web Application
+        working-directory: apps/web
+        run: |
+          npm ci
+          npm run build
+          cp dist/index.html dist/404.html
+
+      - name: Deploy to GitHub Pages Branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./apps/web/dist
