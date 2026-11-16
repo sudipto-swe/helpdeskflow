@@ -55,6 +55,8 @@ def test_tickets_and_golden_eval_count():
 
 
 def test_db_seeding_integrity():
+    from scripts.seed import seed_database
+    seed_database()
     db = SessionLocal()
     try:
         assert db.query(Customer).count() >= 200
